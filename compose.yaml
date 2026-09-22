@@ -1,0 +1,10 @@
+services:
+  jellyfin-cast-receiver:
+    build:
+      context: .
+      args:
+        TAG: v1.3.0
+    container_name: jellyfin-cast-receiver
+    ports:
+      - "80:80"
+    restart: unless-stopped
